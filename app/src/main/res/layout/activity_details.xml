@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="?attr/backgroundcolor"
+        android:fillViewport="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/main_nav"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false">
+
+
+            <ImageView
+                android:id="@+id/searched_detail_image"
+                android:layout_width="272dp"
+                android:layout_height="178dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="70dp"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="67dp"
+                android:layout_marginRight="70dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/searched_detail_title"
+                android:layout_width="369dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searched_detail_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:text="Title"
+                android:textColor="?attr/textcolor"
+                android:textSize="25sp" />
+
+
+            <TextView
+                android:id="@+id/searched_detail_platforms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searched_detail_title"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="38dp"
+                android:layout_marginRight="38dp"
+                android:text="Platforms: "
+                android:textColor="?attr/textcolor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/searched_detail_misc"
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/searched_detail_platforms"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="38dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:textColor="?attr/textcolor"
+                android:textSize="18sp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnaddtocollection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="?attr/buttoncolor"
+                android:clickable="true"
+                android:src="@drawable/add_to_collection"
+                app:srcCompat="@android:drawable/ic_input_add" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/btnaddtowishlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnaddtocollection"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="7dp"
+                android:backgroundTint="?attr/buttoncolor"
+                android:clickable="true"
+                android:src="@drawable/add_to_wishlist" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+<android.support.design.widget.BottomNavigationView
+android:id="@+id/main_nav"
+
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentStart="true"
+android:layout_alignParentBottom="true"
+android:background="?android:attr/windowBackground"
+app:itemBackground="@color/colorLightGrey"
+app:itemIconTint="@color/nav_item_colors"
+app:itemTextColor="@color/nav_item_colors"
+
+app:layout_constraintBottom_toBottomOf="parent"
+app:layout_constraintLeft_toLeftOf="parent"
+
+app:layout_constraintRight_toRightOf="parent"
+app:menu="@menu/main_menu"
+    android:layout_alignParentLeft="true" />
+
+
+    </android.support.constraint.ConstraintLayout>

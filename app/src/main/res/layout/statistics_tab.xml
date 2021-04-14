@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/backgroundcolor"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:background="?attr/cardbackground"
+        android:gravity="center"
+        android:text="Statistics"
+        android:textColor="?attr/textcolor"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/main_nav"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/main_menu"
+        app:itemBackground="@color/colorLightGrey"
+
+        app:itemIconTint="@color/nav_item_colors"
+        app:itemTextColor="@color/nav_item_colors"
+
+
+        tools:layout_editor_absoluteY="667dp"/>
+
+    <TextView
+        android:id="@+id/textView_total"
+        android:layout_width="356dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Total games in Collection:"
+        android:textColor="?attr/textcolor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView_wishlist"
+        android:layout_width="356dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Total games in WishList:"
+        android:textColor="?attr/textcolor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collection_number" />
+
+
+    <TextView
+        android:id="@+id/textView_per_genre"
+        android:layout_width="356dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="68dp"
+        android:gravity="center"
+        android:text="Collection Games per Genre:"
+        android:textColor="?attr/textcolor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wishlist_number" />
+
+    <TextView
+        android:id="@+id/collection_number"
+        android:layout_width="85dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:text="0"
+        android:textColor="?attr/textcolor"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_total" />
+
+    <TextView
+        android:id="@+id/wishlist_number"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:textColor="?attr/textcolor"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_wishlist"
+        tools:text="0" />
+
+
+    <TextView
+        android:id="@+id/col_genres"
+        android:layout_width="165dp"
+        android:layout_height="357dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:textColor="?attr/textcolor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_per_genre"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</android.support.constraint.ConstraintLayout>
